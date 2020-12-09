@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-aws-bff",
+  "version": "1.0.0",
+  "description": "Node JS AWS BFF Task 9",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app-dev": "nodemon server.js",
+    "eb-init": "eb init --platform node.js --region eu-west-1",
+    "eb-create": "eb create development --single --cname babtsoualiaksandr-bff-develop",
+    "eb-deploy": "eb deploy",
+    "eb-terminate": "eb terminate",
+    "start": "node server.js",
+    "set-env": "eb setenv `cat .env.eb | sed '/^#/ d' | '/^$/ d'`"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babtsoualiaksandr/NODEJS-AWS-BFF.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "RSS"
+  ],
+  "author": "BabtsouAliaksandr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/babtsoualiaksandr/NODEJS-AWS-BFF/issues"
+  },
+  "homepage": "https://github.com/babtsoualiaksandr/NODEJS-AWS-BFF#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
